@@ -4,7 +4,7 @@ on:
     branches: [ main, WRD_T1 ]
 
 jobs:
-  build-and-test:
+  unit-test:
     name: Build and Test
     runs-on: ubuntu-latest
 
@@ -12,26 +12,13 @@ jobs:
       run:
         working-directory: ./posttest
 
-    services:
-      docker:
-        image: docker:19.03.12
-        options: --privileged
-        ports:
-          - 5432:5432
-        volumes:
-          - /var/run/docker.sock:/var/run/docker.sock
-
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Set up Docker Compose
-        run: docker-compose -f docker-compose.yml up -d
-
-      - name: Run Tests
-        run: |
-          docker-compose exec app ./gradlew test
-
-      - name: Clean up
-        if: always()
-        run: docker-compose down
+      -   name: Checkout Code
+          uses: actions/checkout@v3
+      -   name: Setup Java17
+          uses: actions/setup-java@v3
+          with:
+            java-version: '17'
+            distribution: 'zulu'
+      -   name: Run Unit Tests
+          run: ./gradlew test
