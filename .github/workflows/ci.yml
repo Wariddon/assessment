@@ -28,17 +28,10 @@ jobs:
       - name: Set up Docker Compose
         run: docker-compose -f docker-compose.yml up -d
 
-      - name: Wait for DB to be ready
-        run: |
-          until docker-compose exec db pg_isready ; do
-            echo "Waiting for database..."
-            sleep 1
-          done
-
       - name: Run Tests
         run: |
           docker-compose exec app ./gradlew test
 
       - name: Clean up
         if: always()
-        run: docker-compose downz
+        run: docker-compose down
