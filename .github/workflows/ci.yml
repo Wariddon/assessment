@@ -7,6 +7,9 @@ jobs:
   unit-test:
     name: Run Unit Test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./posttest
     steps:
       -   name: Checkout Code
           uses: actions/checkout@v3
