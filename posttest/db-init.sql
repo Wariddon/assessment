@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS lottery CASCADE;
+
+CREATE TABLE lottery
+(
+    id          SERIAL PRIMARY KEY,
+    ticket VARCHAR(255) UNIQUE NOT NULL,
+    price      INTEGER  NOT NULL
+);
+
+
+DROP TABLE IF EXISTS user_ticket CASCADE;
+
+CREATE TABLE user_ticket
+(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    ticket_id INTEGER UNIQUE NOT NULL
+);
+
+DROP TABLE IF EXISTS role_user CASCADE;
+CREATE TABLE role_user
+(
+    id          SERIAL PRIMARY KEY,
+    username VARCHAR(30) UNIQUE NOT NULL,
+    password VARCHAR(30) UNIQUE NOT NULL
+);
