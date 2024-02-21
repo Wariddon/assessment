@@ -29,7 +29,7 @@ public class AdminController {
     @PostMapping("/lotteries")
     public ResponseEntity<Map<String, String>> lotteries(@Valid @RequestBody LotteryRequestDto requestDto) throws Exception {
         Map<String, String> response = new HashMap<>();
-        response.put("tickets", ticketService.createLottery(requestDto));
+        response.put("ticket", ticketService.createLottery(requestDto));
         return ResponseEntity.ok(response);
     }
 
