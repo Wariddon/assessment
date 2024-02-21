@@ -3,20 +3,43 @@ on:
   push:
     branches: [ main, WRD_T1 ]
 
+
 jobs:
   unit-test:
     name: Run Unit Test
     runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16.0
+        env:
+          POSTGRES_DB: assessment
+          POSTGRES_USER: user
+          POSTGRES_PASSWORD: password
+        ports:
+          - "5432:5432"
+        volumes:
+          - ./db-init.sql:/docker-entrypoint-initdb.d/init.sql
+
     defaults:
       run:
         working-directory: ./posttest
+
     steps:
-      -   name: Checkout Code
-          uses: actions/checkout@v3
-      -   name: Setup Java17
-          uses: actions/setup-java@v3
-          with:
-            java-version: '17'
-            distribution: 'zulu'
-      -   name: Run Unit Tests
-          run: ./gradlew test
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Java17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'zulu'
+
+      - name: Set up application configuration
+        run: |
+          echo "spring.datasource.url=jdbc:postgresql://localhost:5432/your_test_db" >> src/main/resources/application.properties
+          echo "spring.datasource.username=your_user" >> src/main/resources/application.properties
+          echo "spring.datasource.password=your_password" >> src/main/resources/application.properties
+
+      - name: Run Unit Tests
+        run: ./gradlew test
