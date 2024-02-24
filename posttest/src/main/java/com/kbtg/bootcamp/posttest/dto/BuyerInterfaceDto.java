@@ -6,4 +6,6 @@ public interface BuyerInterfaceDto {
     String getTicket();
 
     Integer getPrice();
+
+    Integer getAmount();
 }

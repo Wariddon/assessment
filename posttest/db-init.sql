@@ -4,7 +4,8 @@ CREATE TABLE lottery
 (
     id          SERIAL PRIMARY KEY,
     ticket VARCHAR(255) UNIQUE NOT NULL,
-    price      INTEGER  NOT NULL
+    price      INTEGER  NOT NULL,
+	amount      INTEGER  NOT NULL
 );
 
 

@@ -1,5 +1,6 @@
 package com.kbtg.bootcamp.posttest.exception;
 
+import jakarta.validation.UnexpectedTypeException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.ObjectError;
@@ -24,6 +25,12 @@ public class ApiExceptionHandler {
 
     @ExceptionHandler({MethodArgumentTypeMismatchException.class})
     public ResponseEntity<ApiErrorResponse> handleNotFoundException(MethodArgumentTypeMismatchException ex) {
+        ApiErrorResponse errorResponse = new ApiErrorResponse("invalid request parameter", HttpStatus.BAD_REQUEST, ZonedDateTime.now());
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler({UnexpectedTypeException.class})
+    public ResponseEntity<ApiErrorResponse> handleNotFoundException(UnexpectedTypeException ex) {
         ApiErrorResponse errorResponse = new ApiErrorResponse("invalid request parameter", HttpStatus.BAD_REQUEST, ZonedDateTime.now());
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
