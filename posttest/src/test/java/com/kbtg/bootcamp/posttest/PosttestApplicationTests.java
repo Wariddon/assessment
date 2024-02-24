@@ -66,7 +66,7 @@ class PostTestApplicationTests {
                         post("/admin/lotteries")
                                 .contentType(MediaType.APPLICATION_JSON_VALUE)
                                 .accept(MediaType.APPLICATION_JSON)
-                                .content("{\"ticket\":\"111111\",\"price\":250}")
+                                .content("{\"ticket\":\"111111\",\"price\":250,\"amount\":1}")
                 )
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.ticket", is("111111")));

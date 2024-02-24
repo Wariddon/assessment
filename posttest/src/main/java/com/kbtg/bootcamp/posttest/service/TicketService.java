@@ -38,11 +38,15 @@ public class TicketService {
         Optional<Lottery> optionalLottery = lotteryRepository.findByTicket(requestDto.getTicket());
 
         if (optionalLottery.isPresent()) {
+            Lottery lottery = optionalLottery.get();
+            lottery.setAmount(optionalLottery.get().getAmount()+ requestDto.getAmount());
+            lotteryRepository.save(lottery);
             return requestDto.getTicket();
         } else {
             Lottery lottery = new Lottery();
             lottery.setTicket(requestDto.getTicket());
             lottery.setPrice(requestDto.getPrice());
+            lottery.setAmount(requestDto.getAmount());
             lotteryRepository.save(lottery);
         }
 
@@ -93,12 +97,14 @@ public class TicketService {
                 .mapToInt(ticket -> ticket.getPrice())
                 .sum();
 
-        int count = tickets.size();
+        int totalCount = buyerTicket.stream()
+                .mapToInt(ticket -> ticket.getAmount())
+                .sum();
 
         Map<String, Object> sumTicket = Map.of(
                 "ticket", tickets,
                 "cost", totalCost,
-                "count", count
+                "count", totalCount
         );
 
         return sumTicket;

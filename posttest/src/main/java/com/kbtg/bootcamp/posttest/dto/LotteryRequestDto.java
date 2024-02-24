@@ -17,4 +17,7 @@ public class LotteryRequestDto {
 
     @NotNull(message = "require price")
     private int price;
+
+    @NotNull(message = "require amount")
+    private int amount;
 }

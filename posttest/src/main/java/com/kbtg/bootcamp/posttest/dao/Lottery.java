@@ -21,4 +21,7 @@ public class Lottery {
 
     @Column(name = "price")
     private int price;
+
+    @Column(name = "amount")
+    private int amount;
 }
