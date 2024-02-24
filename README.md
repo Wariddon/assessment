@@ -1,6 +1,9 @@
 # post test assessment
 
 ---
+### V1.02 - 21/02/2024
+- update amount object and add more some validation 
+---
 ### V1.01 - 21/02/2024
 
 
