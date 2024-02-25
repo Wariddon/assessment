@@ -8,4 +8,5 @@ public interface BuyerInterfaceDto {
     Integer getPrice();
 
     Integer getAmount();
+
 }

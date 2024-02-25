@@ -60,7 +60,7 @@ public class TicketService {
         Optional<User> ticketAlreadyBuy = userRepository.findByTicketId(ticketId);
 
         if (!optionalLottery.isPresent()) {
-            throw new NotFoundException("ticket id not found");
+            throw new NotFoundException("ticket not found");
         }
 
         if (ticketAlreadyBuy.isPresent()) {
@@ -80,7 +80,7 @@ public class TicketService {
         Optional<BuyerInterfaceDto> ticketAlreadyBuy = userRepository.getBuyerTicketByUserIdAndTicketId(userId, ticketId);
 
         if (!ticketAlreadyBuy.isPresent()) {
-            throw new BadRequestException("Hey, you don't have this ticket, do you?");
+            throw new BadRequestException("you don't buy this ticket!");
         }
         userRepository.deleteById(Long.valueOf(ticketAlreadyBuy.get().getId()));
         return String.valueOf(ticketAlreadyBuy.get().getTicket());

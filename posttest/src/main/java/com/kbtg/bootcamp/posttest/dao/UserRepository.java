@@ -17,7 +17,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "SELECT l.* as price FROM user_ticket u JOIN lottery l on u.ticket_id = l.id WHERE user_id = :userId", nativeQuery = true)
     List<BuyerInterfaceDto> getBuyerTicket(long userId);
 
-    @Query(value = "SELECT l.* FROM user_ticket u JOIN lottery l on u.ticket_id = l.id WHERE user_id = :userId and l.id = :ticketId", nativeQuery = true)
+    @Query(value = "SELECT u.id as id, l.ticket as ticket FROM user_ticket u JOIN lottery l on u.ticket_id = l.id WHERE user_id = :userId and l.id = :ticketId", nativeQuery = true)
     Optional<BuyerInterfaceDto> getBuyerTicketByUserIdAndTicketId(long userId, long ticketId);
 
 }
