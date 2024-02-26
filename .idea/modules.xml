@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/assessment.iml" filepath="$PROJECT_DIR$/.idea/assessment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.kbtg.bootcamp.postTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.kbtg.bootcamp.postTest.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/postTest.main.iml" filepath="$PROJECT_DIR$/.idea/modules/postTest.main.iml" />
     </modules>
   </component>

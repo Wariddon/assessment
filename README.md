@@ -1,4 +1,7 @@
 # post test assessment
+# Warning. 
+- run "./gradlew clean build wrapper bootJar" on posttest before run docker-compose up
+
 
 ---
 ### V1.02 - 21/02/2024

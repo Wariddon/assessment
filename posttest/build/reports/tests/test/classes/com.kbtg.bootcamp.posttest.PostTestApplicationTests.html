@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">3.924s</div>
+<div class="counter">2.894s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,37 +81,37 @@
 <tr>
 <td class="success">user can buy lottery //users/{userId}/lotteries/{ticketId}}</td>
 <td class="success">buyLottery()</td>
-<td class="success">0.227s</td>
+<td class="success">0.122s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">admin can create lotteries /lotteries</td>
 <td class="success">canCreateLottery()</td>
-<td class="success">0.195s</td>
+<td class="success">0.140s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">admin can get /lotteries</td>
 <td class="success">canGetLotteries()</td>
-<td class="success">0.023s</td>
+<td class="success">0.015s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">user can sell lottery //users/{userId}/lotteries/{ticketId}}</td>
 <td class="success">deleteBuyerLottery()</td>
-<td class="success">0.017s</td>
+<td class="success">0.018s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">user can get lottery //users/{userId}/lotteries/{ticketId}}</td>
 <td class="success">getBuyerLottery()</td>
-<td class="success">0.031s</td>
+<td class="success">0.024s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">can run /helloworld</td>
 <td class="success">helloWorld()</td>
-<td class="success">3.431s</td>
+<td class="success">2.575s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -119,10 +119,10 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:18:47.350 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.1.Final
-23:18:47.996 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:47.996 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.001 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 4 ms
+<pre>22:51:31.883 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.1.Final
+22:51:32.925 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:32.925 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:32.929 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 2 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -160,9 +160,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-23:18:48.186 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:48.186 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.187 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+22:51:33.025 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:33.026 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:33.026 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -200,9 +200,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-23:18:48.399 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:48.399 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.400 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+22:51:33.147 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:33.147 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:33.147 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -236,13 +236,13 @@ MockHttpServletResponse:
     Error message = null
           Headers = [Content-Type:&quot;application/json&quot;]
      Content type = application/json
-             Body = {&quot;count&quot;:1,&quot;ticket&quot;:&quot;111111&quot;,&quot;cost&quot;:250}
+             Body = {&quot;count&quot;:1,&quot;cost&quot;:250,&quot;ticket&quot;:&quot;111111&quot;}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-23:18:48.438 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+22:51:33.167 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:33.167 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:33.167 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -280,9 +280,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-23:18:48.626 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:48.626 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.627 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+22:51:33.307 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:33.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:33.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -320,9 +320,9 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-23:18:48.646 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+22:51:33.326 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+22:51:33.326 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+22:51:33.327 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
 
 MockHttpServletRequest:
       HTTP Method = DELETE
@@ -371,7 +371,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at Feb 25, 2024, 11:18:48 PM</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at Feb 26, 2024, 10:51:33 PM</p>
 </div>
 </div>
 </body>

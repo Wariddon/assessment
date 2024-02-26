@@ -1,7 +1,7 @@
-|23:18:47.350 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.1.Final
-Å23:18:47.996 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:47.996 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.001 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 4 ms
+|22:51:31.883 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.1.Final
+Å22:51:32.925 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:32.925 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:32.929 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 2 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -40,9 +40,9 @@ Handler:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-Å23:18:48.186 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:48.186 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.187 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+Å22:51:33.025 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:33.026 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:33.026 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -81,9 +81,9 @@ Handler:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-Å23:18:48.399 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:48.399 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.400 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+Å22:51:33.147 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:33.147 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:33.147 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -118,13 +118,13 @@ Handler:
     Error message = null
 7          Headers = [Content-Type:"application/json"]
 &     Content type = application/json
->             Body = {"count":1,"ticket":"111111","cost":250}
+>             Body = {"count":1,"cost":250,"ticket":"111111"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-Å23:18:48.438 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+Å22:51:33.167 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:33.167 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:33.167 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = POST
@@ -163,9 +163,9 @@ Handler:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-Å23:18:48.626 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:48.626 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.627 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+Å22:51:33.307 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:33.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:33.307 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -204,9 +204,9 @@ Handler:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-Å23:18:48.646 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
-w23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
-Ä23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+Å22:51:33.326 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+w22:51:33.326 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+Ä22:51:33.327 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
 
 MockHttpServletRequest:
       HTTP Method = DELETE
