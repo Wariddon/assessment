@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kbtg.bootcamp.posttest.PostTestApplicationTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-02-25T16:18:44" hostname="WARIDDON" time="3.939">
+  <properties/>
+  <testcase name="can run /helloworld" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="3.431"/>
+  <testcase name="user can buy lottery //users/{userId}/lotteries/{ticketId}}" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="0.227"/>
+  <testcase name="user can get lottery //users/{userId}/lotteries/{ticketId}}" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="0.031"/>
+  <testcase name="admin can create lotteries /lotteries" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="0.195"/>
+  <testcase name="admin can get /lotteries" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="0.023"/>
+  <testcase name="user can sell lottery //users/{userId}/lotteries/{ticketId}}" classname="com.kbtg.bootcamp.posttest.PostTestApplicationTests" time="0.017"/>
+  <system-out><![CDATA[23:18:47.350 [Test worker] INFO org.hibernate.validator.internal.util.Version -- HV000001: Hibernate Validator 8.0.1.Final
+23:18:47.996 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:47.996 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.001 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 4 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /helloworld
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.TicketController
+           Method = com.kbtg.bootcamp.posttest.controller.TicketController#hello()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=ISO-8859-1", Content-Length:"11"]
+     Content type = text/plain;charset=ISO-8859-1
+             Body = Hello World
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+23:18:48.186 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:48.186 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.187 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users/1111111111/lotteries/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.TicketController
+           Method = com.kbtg.bootcamp.posttest.controller.TicketController#buyLottery(int, int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"id":"1"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+23:18:48.399 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:48.399 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.400 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users/1111111111/lotteries
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.TicketController
+           Method = com.kbtg.bootcamp.posttest.controller.TicketController#buyGetLottery(int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"count":1,"ticket":"111111","cost":250}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+23:18:48.438 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.438 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /admin/lotteries
+       Parameters = {}
+          Headers = [Content-Type:"application/json", Accept:"application/json", Content-Length:"42"]
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.AdminController
+           Method = com.kbtg.bootcamp.posttest.controller.AdminController#lotteries(LotteryRequestDto)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"ticket":"111111"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+23:18:48.626 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:48.626 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.627 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 1 ms
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /lotteries
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.TicketController
+           Method = com.kbtg.bootcamp.posttest.controller.TicketController#lotteries()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"tickets":[]}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+23:18:48.646 [Test worker] INFO org.springframework.mock.web.MockServletContext -- Initializing Spring TestDispatcherServlet ''
+23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Initializing Servlet ''
+23:18:48.646 [Test worker] INFO org.springframework.test.web.servlet.TestDispatcherServlet -- Completed initialization in 0 ms
+
+MockHttpServletRequest:
+      HTTP Method = DELETE
+      Request URI = /users/1111111111/lotteries/1
+       Parameters = {}
+          Headers = []
+             Body = <no character encoding set>
+    Session Attrs = {}
+
+Handler:
+             Type = com.kbtg.bootcamp.posttest.controller.TicketController
+           Method = com.kbtg.bootcamp.posttest.controller.TicketController#deleteBuyerLottery(int, int)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"ticket":"111111"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
